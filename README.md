@@ -26,6 +26,27 @@ in these second examples you can see how we can use ETWProcessMon/2 v1/v1.1 or v
 also in the next picture you can see what we can find in "ETWProcessMonlog.txt" file which made by ETWProcessMon v1.0 , v1.1 and v2.0 , but in ETWProcessMon2.exe v2.1 we don't have this text log file, for example you can see in Cobaltstrike v4.4 with Sleep Command (which will Encrypt/Decrypt MZ Header in-memory)
 you will have Abnormal ETW VirtualMemAlloc Events for Target Process in this case "Notepad", as you can see when Sleep set to 2 then we have every 2 sec ETW VirtualMemAlloc Events for same StartAddress (in-memory) for Process Notepad. (Delta time for Each ETW event is 2 sec because Sleep Set to 2 secs)
 
+format in ETWProcessMonlog.txt log file for version (1.0 , 1.1 and 2.0):
+
+ETWProcessMonlog.txt and example of ETW VirtualMemAlloc event records:
+
+     "[3/23/2022 5:07:51 PM] PID:(5140) TID(6628) :1661968515072:65536:MEM_COMMIT, MEM_RESERVE:0x10000:0x182f50c0000 [VirtualMemAlloc]"
+
+in this VirtualMemAlloc Record in ETWProcessMonlog.txt you have these informations:
+      
+      [Date Time] PID:(????) TID(????) :Win32StartAddress:Size_of_Allocation:Mem_Commit, Mem_Reserve:Length:StartAddress]
+
+so your ETW VirtualMemAlloc Event informations are :
+       
+      Date time => [3/23/2022 5:07:51 PM]
+      PID => 5140
+      TID => 6628
+      Win32StartAddress => 1661968515072
+      Size_of_Allocation => 65536
+      Memory info => MEM_COMMIT, MEM_RESERVE
+      Length:StartAddress => 0x10000:0x182f50c0000
+      
+
 ### ETWProcessMon.exe v1.0/v1.1 for Beacon Detection via VirtualMemAlloc ETW Events....  
    ![](https://github.com/DamonMohammadbagher/ETWProcessMon2/blob/main/Pics/EventWatcher01.png)
 
@@ -101,6 +122,9 @@ md5 info:
 ### VirtualMemAllocMon v1.1 & Detecting Local Thread Injection Attack by sleep-mask method via ShellcodeFluctuation tool (Detecting payload in-memory before encoding via xor & Pe Header)  
    ![](https://github.com/DamonMohammadbagher/ETWProcessMon2/blob/main/VirtualMemAllocMon/Pics/Sleepmask4x.png)
    
+ ### VirtualMemAllocMon v2.2 & Detecting EKKO Technique + JMP Method and ...
+   ![](https://github.com/DamonMohammadbagher/ETWProcessMon2/blob/main/VirtualMemAllocMon/VirtualMemAllocMon2.2/Pics/v2.2-2.png)
+ 
  ### VirtualMemAllocMon v2.0 & VirtualMemAlloc ETW Event  
    ![](https://github.com/DamonMohammadbagher/ETWProcessMon2/blob/main/VirtualMemAllocMon/VirtualMemAllocMon2/Pictures/VirtualMemAllocMonv2.png)
    
@@ -130,6 +154,10 @@ Important: `this Code will use memory scanner "VirtualMemAllocMon.exe" v1.1 so b
 
 Important: `this Code will use memory scanners "pe-sieve64.exe" & "hollows_hunter64.exe",so before run SysPM2Monitor2.7 you need download/paste these exe files to \SysPM2Monitor2.7\Bin\Debug\ folder then you can run SysPM2Monitor2.7.exe , you can download these files from here link1: https://github.com/hasherezade/pe-sieve
 link2: https://github.com/hasherezade/hollows_hunter.`
+
+#### Note: pe-sieve64.exe [v0.3.5] is compatible with ETWPM2Monitor2.exe and SysPM2Monitor2.7.exe
+
+#### Note: New Ver of pe-sieve64.exe [v0.3.9] is not compatible to use for these projects like ETWPM2Monitor2.exe and SysPM2Monitor2.7.exe
 
 Video1 : https://www.youtube.com/watch?v=E7mB1we9GhU
 
@@ -171,7 +199,7 @@ This tool [ETWPM2Monitor version2] is for Monitor ETW Event-Logs [log name: ETWP
 ! this version ETWPM2Monitor2 v2.1 will work with ETWProcessMon2.1 and both are
 ! very fast for (Remote-Thread-Injection) Technique/Payload Detection via ETW Events)
 + some bugs fixed. New Tab called "Alarms by Memory Scanner" added, powershell detection added.
-+ last source/exe update(52) v2.1.52.628 [Nov 21, 2023]... 
++ last source/exe update(52) v2.1.52.630 [Mar 19, 2024]... 
 ```
 Video: https://www.youtube.com/watch?v=DMtMTkAfFNo
 
@@ -189,7 +217,14 @@ md5 info [ETWPM2Monitor2.exe], "exe files are not safe here in github so make yo
                     
     bc42bb0ace-5de9f8ed08-e26c46503614 => ETWPM2Monitor2.exe (v2.1) [v2.1.47.480] 31,Oct,2022 [old]
     3066c279ad-acf3f2971e-2bdf5c163fdf => ETWPM2Monitor2.exe (v2.1) [v2.1.51.590] 17,Sep,2023 [old]
-    34064d7e1c-4ae5a43e39-9c806767d425 => ETWPM2Monitor2.exe (v2.1) [v2.1.52.628] 21,Nov,2023
+    34064d7e1c-4ae5a43e39-9c806767d425 => ETWPM2Monitor2.exe (v2.1) [v2.1.52.628] 21,Nov,2023 [old]
+    f7749e4e0a-b16fccf5bd-d2a66bf81167 => ETWPM2Monitor2.exe (v2.1) [v2.1.52.630] 19,Mar,2024
+    bc8bfbe7ce-08b43d1a43-a5e6d73cf389 => pe-sieve.exe [v0.3.5] (compatible ver with ETWPM2Monitor2.exe)
+
+#### Note: pe-sieve64.exe [v0.3.5] is compatible with ETWPM2Monitor2.exe and SysPM2Monitor2.7.exe
+
+#### Note: New Ver of pe-sieve64.exe [v0.3.9] is not compatible to use for these projects like ETWPM2Monitor2.exe and SysPM2Monitor2.7.exe
+
     
 ### ETWPM2Monitor2 v2.1 [v2.1.51.590]  
    ![](https://github.com/DamonMohammadbagher/ETWProcessMon2/blob/main/ETWPM2Monitor2/Pics/V21_NewScanners.jpeg)

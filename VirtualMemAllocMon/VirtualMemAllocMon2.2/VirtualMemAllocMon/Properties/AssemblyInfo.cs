@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ETWPM2Monitor2")]
-[assembly: AssemblyDescription("Published by Damon Mohammadbagher , 2021")]
+[assembly: AssemblyTitle("VirtualMemAllocMon")]
+[assembly: AssemblyDescription("Published by Damon Mohammadbagher , Mar 2022")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("ETWPM2Monitor2")]
-[assembly: AssemblyCopyright("Published by Damon Mohammadbagher , Copyright © Microsoft 2021")]
+[assembly: AssemblyProduct("VirtualMemAllocMon")]
+[assembly: AssemblyCopyright("Published by Damon Mohammadbagher , Copyright © Microsoft 2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("56334e4e-18a5-4d35-90dc-065eb0a46674")]
+[assembly: Guid("3c285a67-fd23-4ef2-a1ec-09f0913a8536")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2.1.52.630")]
-[assembly: AssemblyFileVersion("2.1.52.630")]
+[assembly: AssemblyVersion("2.2.0.4")]
+[assembly: AssemblyFileVersion("2.2.0.4")]

@@ -23,12 +23,20 @@ Video1 : https://www.youtube.com/watch?v=E7mB1we9GhU
 
 Video2 : https://www.youtube.com/watch?v=Q8fSpUXR2kw
 
+Video3 [new] : https://www.aparat.com/v/7BehD
+
+Video3 [new] : https://www.youtube.com/watch?v=axSmJIZZ5LA
+
+
 Related Article : https://damonmohammadbagher.github.io/Posts/18mar2022x.html
 
 md5 info:
                
        3d81808d17-7d0fb89ed8-1b20e2d03f36 => SysPM2Monitor2_7.exe [v2.7.20.70]
        5ee176af45-524d29ea3e-b89fe0c3e928 => VirtualMemAllocMon.exe (v1.1)
+       bc8bfbe7ce-08b43d1a43-a5e6d73cf389 => pe-sieve.exe [v0.3.5] (compatible ver with SysPM2Monitor2_7.exe)
+      
+
 
 
 Note: SysPM2Monitor2_7.exe will save all System/Detection logs to Windows eventlog Name "SysPM2Monitor2_7". 
